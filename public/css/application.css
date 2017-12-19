@@ -1,0 +1,147 @@
+body {
+	background-image: url("/img/background.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+
+
+h1 {
+	font-size: 80px;
+	color: #e6e6fa;
+	font-family: "Cormorant Upright"
+}
+
+
+.container {
+	margin: auto;
+	width: 100%;
+	padding: 20px 20px 20px 20px;
+	color: white;
+	text-align: center;
+}
+
+
+#error {
+	font-size: 20px;
+	text-align: center;
+	color: white;
+	padding: 10px;
+}
+
+
+
+.result_title {
+	text-align: center;
+	color: white;
+	text-decoration: underline;
+	font-size: 20px;
+	font-weight: bold;
+}
+
+
+#menu {
+color: silver;
+cursor: pointer;
+width: 30%;
+padding: 10px 10px 50px 10px;
+outline: none;
+text-align: center;
+border: none;
+font-size: 20px;
+margin: auto;
+}
+
+h3 {
+	text-align: center;
+}
+
+input#button {
+	background-color: #1ca913;
+	border-radius: 5px;
+}
+
+
+
+#menu.panel {
+background-color: white;
+padding: 0 0;
+overflow: hidden;
+}
+
+
+input[type=text] {
+width: 50%;
+padding: 12px 20px;
+margin: 4px 4px;
+box-sizing: border-box;
+font-size: 15px;
+}
+
+input[type=submit] {
+background-color: white;
+border: none;
+padding: 12px 20px;
+text-decoration: none;
+margin: 4px 4px;
+cursor: pointer;
+font-size: 18px;
+color: white;
+font-weight: bold;
+}
+
+
+footer {
+	color: white;
+	text-align: center;
+	padding: 50px;
+}
+
+a {
+	color: Blue;
+}
+
+a:hover {
+	color: CornFlowerBlue;
+}
+
+footer a {
+color: white;
+text-decoration: none;
+}
+
+footer a:hover {
+	color: Blue;
+	text-decoration: underline;
+}
+
+
+
+
+table {
+	margin: auto;
+	border-collapse: collapse;
+	width: 80%;
+}
+
+td, th {
+border: 1px;
+padding: 8px;
+text-align: left;
+background-color: rgba(255, 255, 255, 0.5) ;
+}
+
+th {
+	background-color: LightSteelBlue;
+}
+
+/* 
+tr:nth-child(even) {
+	background-color: White;
+}
+
+tr:nth-child(odd) {
+	background-color: LightSteelBlue;
+}
+*/

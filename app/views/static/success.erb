@@ -1,0 +1,124 @@
+<h1>Congratulations! </h1>
+<p></p>
+
+<!-- <ol>
+<% Url.all.each do |url| %>
+<li><%= url.long_url %> 
++ <%= "http://www.nextacademy.com" %>/<%= url.short_url %> 
++ <%= url.click_count %></li>
+
+<% end %>
+</ol> -->
+
+<p>You have successfully shorten your long URL!</p>
+
+
+
+
+<div id="results">
+<table class="table_results">
+
+<tr>
+<th>No.</th>
+<th>Original URL</th>
+<th>Shorten URL</th>
+<th>Created At</th>
+<th>Click Count</th>
+</tr>
+
+
+<% Url.all.sort_by{|t| - t.created_at.to_i}.first(1).each_with_index do |url, idx| %>
+<tr>
+<td><%= idx + 1 %></td>
+<td><%= url.long_url %></td>
+<td><%= url.short_url %></td>
+<td class="center"><%= url.created_at %></td>
+<td class="center"><%= url.click_count %></td>
+</tr>
+<% end %>
+
+
+</table>
+</div>
+<p></p>
+<br>
+<hr>
+<br>
+
+
+
+
+<h3 style="text-decoration: underline;">10 Most recent results</h3>
+
+
+<div id="results">
+<table class="table_results">
+
+<tr>
+<th>No.</th>
+<th>Original URL</th>
+<th>Shorten URL</th>
+<th>Created At</th>
+<th>Click Count</th>
+</tr>
+
+<% index = Url.all.count + 1%>
+<% Url.all.sort_by{|t| - t.created_at.to_i}.first(10).each do |url| %>
+<tr>
+<td><%= index -= 1%></td>
+<td><%= url.long_url %></td>
+<td><%= url.short_url %></td>
+<td class="center"><%= url.created_at %></td>
+<td class="center"><%= url.click_count %></td>
+</tr>
+<% end %>
+
+
+</table>
+</div>
+
+<br>
+<hr>
+<br>
+
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+<p></p>
+<h3 style="text-decoration: underline;: ">All results:</h3>
+<p></p>
+<div id="results">
+<table>
+
+<tr>
+<th>No.</th>
+<th>Original URL</th>
+<th>Shorten URL</th>
+<th>Created At</th>
+<th>Click Count</th>
+</tr>
+
+
+<% Url.all.sort_by{|t| - t.created_at.to_i}.reverse.each_with_index do |url, idx| %>
+<tr>
+<td><%= idx + 1 %></td>
+<td><%= url.long_url %></td>
+<td><%= url.short_url %></td>
+<td class="center"><%= url.created_at %></td>
+<td class="center"><%= url.click_count %></td>
+</tr>
+<% end %>
+
+
+</table>
+</div>
+
+
+
+
+<p></p>
+<p><a href="/">Home</p>
