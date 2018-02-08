@@ -1,55 +1,41 @@
 <div class="container">
-<h1>BitGalaxy URL</h1>
-
-
-
-<form action="/submit-post" method="POST" id="url-form">
-<input id="link_input" type="text" name="long_url" placeholder="Paste a link to shorten it">
-<input id="button" class="button" type="submit" value="SHORTEN" >
-</form>
-
+   <h1>BitGalaxy URL</h1>
+   <form action="/submit-post" method="POST" id="url-form">
+      <input id="link_input" type="text" name="long_url" placeholder="Paste a link to shorten it">
+      <input id="button" class="button" type="submit" value="SHORTEN" >
+   </form>
 </div>
-
-
 <div id="menu">
-<h3>Shorten long URL in 3 easy steps!</h3>
-<div>
-<p>1. Enter or paste the URL that you want to shorten</p>
-<p>2. Click "Shorten"</p>
-<p>3. Viola! You have shorten a URL!</p>
-<p>Tips: Make sure your URL starts with http:// or https://</p>
+   <h3>Shorten long URL in 3 easy steps!</h3>
+   <div>
+      <p>1. Enter or paste the URL that you want to shorten</p>
+      <p>2. Click "Shorten"</p>
+      <p>3. Viola! You have shorten a URL!</p>
+      <p>Tips: Make sure your URL starts with http:// or https://</p>
+   </div>
 </div>
-</div>
-
-
-
 <div id="link_table">
-<table>
-<thead>
-<tr>
-<th>No. </th>
-<th>Original URL</th>
-<th>Shortened URL</th>
-<th>Created At</th>
-<th>Click Count</th>
-</tr>
-</thead>
-
-
-<tbody>
-<% @url.each do |url| %>
-<tr>
-<td> <%= url.id %> </td> 
-<td> <%= url.long_url %></td> 
-<td> <a href='/<%= url.short_url %>'><%= request.base_url+'/'+url.short_url %></a></td>
-<td> <%= url.created_at %> </td>
-<td> <%= url.click_count%> </td>
-						</tr>
-<% end %>
-
-</tbody>
-</table>
+   <table>
+      <thead>
+         <tr>
+            <th>No. </th>
+            <th>Original URL</th>
+            <th>Shortened URL</th>
+            <th>Created At</th>
+            <th>Click Count</th>
+         </tr>
+      </thead>
+      <tbody>
+         <% @url.each do |url| %>
+         <tr>
+            <td> <%= url.id %> </td>
+            <td> <%= url.long_url %></td>
+            <td> <a href='/<%= url.short_url %>'><%= request.base_url+'/'+url.short_url %></a></td>
+            <td> <%= url.created_at %> </td>
+            <td> <%= url.click_count%> </td>
+         </tr>
+         <% end %>
+      </tbody>
+   </table>
 </div>
-
-
 
